@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+﻿import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
@@ -63,7 +63,7 @@ export default function About() {
                 <div className="absolute inset-0 grain" aria-hidden="true" />
                 <div className="absolute bottom-8 left-8 right-8 text-cream">
                   <p className="font-serif italic text-2xl leading-tight text-balance">
-                    “{bioHighlight}”
+                    "{bioHighlight}"
                   </p>
                   <p className="mt-3 text-[11px] uppercase tracking-[0.3em] text-cream/70">
                     {contact.crp}

@@ -1,18 +1,13 @@
-import { motion, useScroll, useSpring } from "framer-motion";
+import { useScroll, motion, useSpring } from "framer-motion";
 
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll();
-  const scaleX = useSpring(scrollYProgress, {
-    stiffness: 220,
-    damping: 32,
-    mass: 0.3,
-  });
+  const scaleX = useSpring(scrollYProgress, { stiffness: 180, damping: 30 });
 
   return (
     <motion.div
-      aria-hidden="true"
-      style={{ scaleX }}
-      className="fixed top-0 left-0 right-0 z-50 h-[2px] origin-left bg-gradient-to-r from-sage-400 via-gold-400 to-sage-500"
+      style={{ scaleX, transformOrigin: "left" }}
+      className="fixed top-0 inset-x-0 h-[2px] z-50 bg-gradient-to-r from-blush-400 via-blush-500 to-blush-600"
     />
   );
 }

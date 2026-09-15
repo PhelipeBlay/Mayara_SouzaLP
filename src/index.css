@@ -40,12 +40,12 @@
   }
 
   ::selection {
-    background: rgba(124, 154, 142, 0.25);
-    color: #2D2D2D;
+    background: rgba(201, 146, 142, 0.2);
+    color: #1A2F3B;
   }
 
   :focus-visible {
-    outline: 2px solid theme(colors.gold.500);
+    outline: 2px solid theme(colors.blush.500);
     outline-offset: 3px;
     border-radius: 4px;
   }
@@ -70,7 +70,7 @@
   }
 
   .prose-editorial p:first-of-type::first-letter {
-    @apply font-serif text-sage-400 float-left mr-2 mt-2;
+    @apply font-serif text-blush-500 float-left mr-2 mt-2;
     font-size: 3.75rem;
     line-height: 0.85;
   }
@@ -87,7 +87,7 @@
 
   .rule {
     height: 1px;
-    background: linear-gradient(to right, transparent, rgba(64, 84, 77, 0.25), transparent);
+    background: linear-gradient(to right, transparent, rgba(176, 112, 112, 0.2), transparent);
   }
 
   .accent-line {
@@ -133,8 +133,8 @@
   top: 0;
   z-index: 999;
   padding: 0.75rem 1.25rem;
-  background: #2D2D2D;
-  color: #FEFCF9;
+  background: #1A2F3B;
+  color: #FDF5F0;
   border-radius: 0 0 6px 0;
 }
 .skip-link:focus {

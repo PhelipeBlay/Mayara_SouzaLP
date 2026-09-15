@@ -3,8 +3,8 @@ import { useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ScrollProgress } from "@/components/ScrollProgress";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { useLenis } from "@/hooks/useLenis";
 
 type Props = { children: ReactNode };
@@ -34,7 +34,7 @@ export function App({ children }: Props) {
         </AnimatePresence>
       </main>
       <Footer />
-      <WhatsAppButton />
+      <ScrollToTop />
     </>
   );
 }

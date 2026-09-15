@@ -4,6 +4,32 @@ export default {
   theme: {
     extend: {
       colors: {
+        petrol: {
+          DEFAULT: '#1A2F3B',
+          50: '#edf2f5',
+          100: '#c8d8e2',
+          200: '#91b5c9',
+          300: '#5a92b0',
+          400: '#3b7291',
+          500: '#275470',
+          600: '#1A2F3B',
+          700: '#142430',
+          800: '#0f1a23',
+          900: '#09111a',
+        },
+        blush: {
+          50: '#fdf5f0',
+          100: '#f8e8e8',
+          200: '#f0d0d0',
+          300: '#e8c4c4',
+          400: '#dba8a8',
+          500: '#c9928e',
+          600: '#b07070',
+          700: '#8d5555',
+          800: '#6e4141',
+          900: '#4d2e2e',
+        },
+        // Legacy palette kept for backward compatibility with non-redesigned pages
         sage: {
           50: "#f4f7f5",
           100: "#e2ebe6",
@@ -41,15 +67,15 @@ export default {
           900: "#55412b",
         },
         ink: {
-          DEFAULT: "#2D2D2D",
-          soft: "#6B6B6B",
+          DEFAULT: "#2A2A2A",
+          soft: "#7A7A7A",
         },
-        cream: "#FEFCF9",
+        cream: "#FDF5F0",
       },
       fontFamily: {
-        serif: ['"Playfair Display"', "Georgia", "serif"],
+        serif: ['"Cormorant Garamond"', '"Playfair Display"', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', 'sans-serif'],
-        body: ['Lora', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         'display': ['clamp(2.5rem, 5vw + 1rem, 4.75rem)', { lineHeight: '1.05', letterSpacing: '-0.02em' }],
@@ -61,17 +87,20 @@ export default {
         content: '1200px',
       },
       boxShadow: {
-        soft: '0 30px 60px -25px rgba(64, 84, 77, 0.18)',
-        glow: '0 20px 50px -20px rgba(196, 167, 108, 0.35)',
-        card: '0 10px 40px -20px rgba(45, 45, 45, 0.15)',
+        soft: '0 30px 60px -25px rgba(26, 47, 59, 0.22)',
+        glow: '0 20px 50px -20px rgba(201, 146, 142, 0.4)',
+        card: '0 10px 40px -20px rgba(42, 42, 42, 0.15)',
+        'blush': '0 20px 50px -20px rgba(176, 112, 112, 0.35)',
       },
       backgroundImage: {
         'grain': "url(\"data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.3'/></svg>\")",
-        'paper': "radial-gradient(1200px 800px at 10% -10%, #f5f0eb 0%, transparent 55%), radial-gradient(900px 700px at 100% 10%, #eef2ee 0%, transparent 60%), #fefcf9",
+        'paper': "radial-gradient(1200px 800px at 10% -10%, #f8ebe8 0%, transparent 55%), radial-gradient(900px 700px at 100% 10%, #f0ddd8 0%, transparent 60%), #FDF5F0",
+        'petrol-gradient': "linear-gradient(135deg, #1A2F3B 0%, #142430 100%)",
       },
       animation: {
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
         'float': 'float 6s ease-in-out infinite',
+        'fade-up': 'fadeUp 0.6s ease forwards',
       },
       keyframes: {
         pulseSoft: {
@@ -81,6 +110,10 @@ export default {
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
           '50%': { transform: 'translateY(-6px)' },
+        },
+        fadeUp: {
+          from: { opacity: '0', transform: 'translateY(20px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
         },
       },
     },
